@@ -1,0 +1,17 @@
+.header {
+    position: relative;
+    display: block;
+
+    &__home {
+        min-height: 70vh;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin-top: 15vh;
+        }
+
+    }
+
+}
