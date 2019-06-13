@@ -38,3 +38,19 @@ $font-primary: 'Ubuntu', sans-serif;
     background: linear-gradient(150deg, $c1 0%, $c2 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$c1",endColorstr="$c2",GradientType=1);
 }
+
+.color-orange {
+    color: $color-orange1;
+}
+
+.color-blue {
+    color: $color-blue1;
+}
+
+.color-yellow {
+    color: $color-yellow3;
+}
+
+.color-green {
+    color: $color-green2;
+}

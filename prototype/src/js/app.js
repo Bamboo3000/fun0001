@@ -55,37 +55,37 @@ function lazyImages()
     });
 }
 
-function productsCarousel()
-{
-    var $owl = $('.owl-carousel');
-	$owl.owlCarousel({
-        loop: false,
-        margin: 0,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        rewind: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            480: {
-                items: 2
-            },
-            768: {
-                items: 3
-            },
-        }
-    });
-    $('.owl-next').click(function() {
-		$owl.trigger('next.owl.carousel');
-	});
-	$('.owl-prev').click(function() {
-		$owl.trigger('prev.owl.carousel');
-	});
-}
+// function productsCarousel()
+// {
+//     var $owl = $('.owl-carousel');
+// 	$owl.owlCarousel({
+//         loop: false,
+//         margin: 0,
+//         nav: false,
+//         dots: true,
+//         autoplay: true,
+//         autoplayTimeout: 3000,
+//         autoplayHoverPause: true,
+//         rewind: true,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             480: {
+//                 items: 2
+//             },
+//             768: {
+//                 items: 3
+//             },
+//         }
+//     });
+//     $('.owl-next').click(function() {
+// 		$owl.trigger('next.owl.carousel');
+// 	});
+// 	$('.owl-prev').click(function() {
+// 		$owl.trigger('prev.owl.carousel');
+// 	});
+// }
 
 function menuToggle()
 {
@@ -100,11 +100,38 @@ function menuToggle()
     });
 }
 
+function placeholder()
+{
+    $('input, select, textarea').on('focusin', function() {
+        $(this).next('.select, .placeholder').addClass('hide');
+    });
+    $('input, select, textarea').on('focusout', function() {
+        if(!$(this).val()) {
+            $(this).next('.select, .placeholder').removeClass('hide');
+        }
+    });
+    $('select').on('click', function() {
+        if(!$(this).val()) {
+            $(this).next('.select, .placeholder').removeClass('hide');
+        } else {
+            $(this).next('.select, .placeholder').addClass('hide');
+        }
+    });
+    $('select').on('change', function() {
+        if(!$(this).val()) {
+            $(this).next('.select, .placeholder').removeClass('hide');
+        } else {
+            $(this).next('.select, .placeholder').addClass('hide');
+        }
+    });
+}
+
 $(document).ready(function() {
     menuToggle();
+    placeholder();
 });
 
 $(window).on('load', function() {
     lazyImages();
-    productsCarousel();
+    //productsCarousel();
 });

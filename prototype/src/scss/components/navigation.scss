@@ -34,7 +34,7 @@
 
         ul {
             padding: 0;
-            margin-top: 5px;
+            margin-top: 10px;
             display: flex;
             flex-wrap: nowrap;
             position: relative;
@@ -46,7 +46,7 @@
                     padding: 2px;
 
                     i {
-                        font-size: 28px;
+                        font-size: 27px;
                         color: white;
                         transition: all 200ms ease;
                         background-color: transparent;
@@ -55,23 +55,7 @@
                     &:hover {
 
                         i {
-
-                            &.fa-facebook-square {
-                                color: #3b5998;
-                            }
-
-                            &.fa-linkedin {
-                                color: #007bb5;
-                            }
-
-                            &.fa-twitter-square {
-                                color: #1da1f2;
-                            }
-
-                            &.fa-instagram {
-                                color: #c32aa3;
-                            }
-
+                            transform: scale(1.2);
                         }
 
                     }

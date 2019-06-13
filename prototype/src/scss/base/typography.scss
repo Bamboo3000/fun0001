@@ -38,23 +38,10 @@ h2,
 
 h3,
 .text-size-xxlarge {
-	font-size: 28px;
-	font-weight: 600;
-	line-height: 1.33;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.16;
 	margin: 0 0 15px 0;
-
-	@media(max-width: 1280px) {
-		font-size: 28px;
-	}
-
-	@media(max-width: 1024px) {
-		font-size: 26px;
-		margin: 0 0 10px 0;
-	}
-
-	@media(max-width: 768px) {
-		font-size: 24px;
-	}
 
 	@media(max-width: 480px) {
 		font-size: 21px;
@@ -64,13 +51,9 @@ h3,
 
 h4,
 .text-size-xlarge {
-	font-size: 21px;
-	font-weight: 600;
+	font-size: 20px;
+	font-weight: 300;
 	line-height: 1.36;
-
-	@media(max-width: 1280px) {
-		font-size: 20px
-	}
 
 	@media(max-width: 1024px) {
 		font-size: 19px
@@ -108,9 +91,9 @@ p,
 }
 
 .text-size-small {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 
 b {
@@ -130,6 +113,10 @@ b {
 		text-decoration: underline;
 	}
 
+}
+
+.fw400 {
+	font-weight: 400;
 }
 
 .text-color {
