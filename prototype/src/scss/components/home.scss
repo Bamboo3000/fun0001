@@ -16,6 +16,7 @@
 
         h2 {
             color: $color-tertiary;
+            margin-bottom: 0.3em;
         }
 
         .path {
@@ -42,12 +43,22 @@
                     transform: translateY(-4px) translateX(126px);
                     border-color: $color-blue1;
                     background-color: $color-blue2;
+
+                    @media(max-width: 1199px) {
+                        transform: translateY(-4px) translateX(36px);
+                    }
+
                 }
 
                 &.yellow {
                     transform: translateY(-8px) translateX(724px + 126px);
                     border-color: $color-yellow1;
                     background-color: $color-yellow2;
+
+                    @media(max-width: 1199px) {
+                        transform: translateY(-8px) translateX(724px + 36px);
+                    }
+
                 }
 
                 &.green {
@@ -62,16 +73,31 @@
             .line1 {
                 position: relative;
                 transform: translateY(-2px) translateX(206px);
+
+                @media(max-width: 1199px) {
+                    transform: translateY(-2px) translateX(116px);
+                }
+
             }
 
             .line2 {
                 position: relative;
-                transform: translateY(-6px) translateX(0px);
+                transform: translateY(-6px);
+
+                @media(max-width: 1199px) {
+
+                }
+
             }
 
             .line3 {
                 position: relative;
                 transform: translateY(-10px) translateX(364px + 206px);
+
+                @media(max-width: 1199px) {
+                    transform: translateY(-10px) translateX(364px + 116px);
+                }
+
             }
 
             .text-green {
@@ -80,10 +106,20 @@
 
             .text-left {
                 padding-left: 40px;
+
+                @media(max-width: 1199px) {
+                    padding-left: 0;
+                }
+
             }
 
             .text-right {
                 padding-right: 40px;
+
+                @media(max-width: 1199px) {
+                    transform: translateX(-45px);
+                }
+
             }
 
             .cta {
