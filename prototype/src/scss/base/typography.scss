@@ -5,8 +5,8 @@ h1,
 	line-height: 1.125;
 	margin: 0 0 0.5em 0;
 
-	@media(max-width: 1024px) {
-		font-size: 44px;
+	@media(max-width: 991px) {
+		font-size: 42px;
 	}
 
 	@media(max-width: 768px) {
@@ -26,6 +26,10 @@ h2,
 	line-height: 1.2;
 	margin: 0 0 1em 0;
 
+	@media(max-width: 991px) {
+		font-size: 32px;
+	}
+
 	@media(max-width: 768px) {
 		font-size: 30px;
 	}
@@ -42,6 +46,10 @@ h3,
 	font-weight: 700;
 	line-height: 1.16;
 	margin: 0 0 15px 0;
+
+	@media(max-width: 991px) {
+		font-size: 22px;
+	}
 
 	@media(max-width: 480px) {
 		font-size: 21px;

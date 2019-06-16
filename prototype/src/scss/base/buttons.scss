@@ -43,6 +43,11 @@
 			opacity: 1;
 		}
 
+		@media(max-width: 991px) {
+			font-size: 18px;
+			padding: 8px 44px!important;
+		}
+
 	}
 
 }
