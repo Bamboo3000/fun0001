@@ -77,6 +77,10 @@
                         transform: translateY(-4px) translateX(15px);
                     }
 
+                    @media(max-width: 767px) {
+                        transform: translateY(-4px) translateX(-15px);
+                    }
+
                 }
 
                 &.yellow {
@@ -90,6 +94,10 @@
 
                     @media(max-width: 991px) {
                         transform: translateY(-8px) translateX(560px + 10px);
+                    }
+
+                    @media(max-width: 767px) {
+                        transform: translateY(-8px) translateX(415px);
                     }
 
                 }
@@ -116,6 +124,11 @@
                     transform: translateY(-2px) translateX(85px);
                 }
 
+                @media(max-width: 767px) {
+                    width: 219px;
+                    transform: translateY(-2px) translateX(55px);
+                }
+
             }
 
             .line2 {
@@ -125,6 +138,10 @@
 
                 @media(max-width: 991px) {
                     width: 560px;
+                }
+
+                @media(max-width: 767px) {
+                    width: 430px;
                 }
 
             }
@@ -142,10 +159,23 @@
                     transform: translateY(-10px) translateX(360px);
                 }
 
+                @media(max-width: 767px) {
+                    width: 219px;
+                    transform: translateY(-10px) translateX(269px);
+                }
+
             }
 
             .text-green {
                 max-width: 480px;
+            }
+
+            .color-blue {
+                transform: translateY(-6px);
+            }
+
+            .color-yellow {
+                transform: translateY(-10px);
             }
 
             .text-left {
@@ -157,6 +187,11 @@
 
                 @media(max-width: 991px) {
                     transform: translateX(10px);
+                }
+
+                @media(max-width: 767px) {
+                    transform: translateX(0);
+                    padding-left: 30px;
                 }
 
             }
@@ -172,6 +207,15 @@
                     transform: translateX(-90px);
                 }
 
+                @media(max-width: 767px) {
+                    transform: translateX(-100px);
+                    padding-right: 15px;
+                }
+
+            }
+
+            .fw400 {
+                margin-bottom: 0;
             }
 
             .cta {
@@ -303,6 +347,7 @@
             .checkbox {
                 display: inline-block;
                 position: relative;
+                margin: 0 auto;
                 margin-bottom: 12px;
                 padding-left: 30px;
                 cursor: pointer;
@@ -310,6 +355,10 @@
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
+
+                a {
+                    text-decoration: underline;
+                }
 
                 input {
                     position: absolute;
