@@ -39,7 +39,7 @@ function cookieAgree()
 function slideTo(el)
 {
 	$('html, body').animate({
-		scrollTop: $(el).offset().top-60
+		scrollTop: $(el).offset().top
 	}, 500);
 }
 

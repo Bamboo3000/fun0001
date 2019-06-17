@@ -73,6 +73,10 @@
                         transform: translateY(-4px) translateX(36px);
                     }
 
+                    @media(max-width: 991px) {
+                        transform: translateY(-4px) translateX(15px);
+                    }
+
                 }
 
                 &.yellow {
@@ -82,6 +86,10 @@
 
                     @media(max-width: 1199px) {
                         transform: translateY(-8px) translateX(724px + 36px);
+                    }
+
+                    @media(max-width: 991px) {
+                        transform: translateY(-8px) translateX(560px + 10px);
                     }
 
                 }
@@ -113,10 +121,10 @@
             .line2 {
                 position: relative;
                 transform: translateY(-6px);
+                margin: 0 auto;
 
                 @media(max-width: 991px) {
                     width: 560px;
-                    margin: 0 auto;
                 }
 
             }
@@ -131,6 +139,7 @@
 
                 @media(max-width: 991px) {
                     width: 280px;
+                    transform: translateY(-10px) translateX(360px);
                 }
 
             }
@@ -146,6 +155,10 @@
                     padding-left: 0;
                 }
 
+                @media(max-width: 991px) {
+                    transform: translateX(10px);
+                }
+
             }
 
             .text-right {
@@ -153,6 +166,10 @@
 
                 @media(max-width: 1199px) {
                     transform: translateX(-45px);
+                }
+
+                @media(max-width: 991px) {
+                    transform: translateX(-90px);
                 }
 
             }
@@ -168,8 +185,16 @@
     &__contact {
         padding: 80px 0;
 
+        @media(max-width: 991px) {
+            padding: 70px 0;
+        }
+
         form {
             margin-top: 60px;
+
+            @media(max-width: 991px) {
+                margin-top: 50px;
+            }
 
             input[type="text"],
             input[type="email"],
@@ -273,6 +298,94 @@
             textarea {
                 line-height: 1.44;
                 resize: none;
+            }
+
+            .checkbox {
+                display: inline-block;
+                position: relative;
+                margin-bottom: 12px;
+                padding-left: 30px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 9;
+
+                    &:checked {
+
+                        &~.checkmark {
+                            background-color: $color-tertiary!important;
+
+                            &:after {
+                                opacity: 1;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                small {
+                    color: $color-red;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 5px;
+                    background-color: $color-grey;
+                    box-shadow: 0px 2px 5px 0px rgba($color: #000000, $alpha: 0.2);
+                    outline: none!important;
+                    transition: all 250ms ease;
+                    transform: translateY(2px);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        transition: all 250ms ease;
+                        opacity: 0;
+                        left: 8px;
+                        top: 4px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid white;
+                        border-width: 0 2px 2px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+
+                }
+
+                &:hover {
+
+                    input {
+
+                        &~.checkmark {
+                            background-color: #ccc;
+                        }
+
+                    }
+
+                }
+
             }
 
             input[type="submit"] {
