@@ -7,6 +7,10 @@
             padding: 70px 0;
         }
 
+        @media(max-width: 575px) {
+            padding: 50px 0;
+        }
+
         h2,
         p {
             margin: 0 auto;
@@ -22,6 +26,10 @@
             padding: 70px 0;
         }
 
+        @media(max-width: 575px) {
+            padding: 50px 0;
+        }
+
         h2 {
             color: $color-tertiary;
             margin-bottom: 0.3em;
@@ -33,6 +41,10 @@
 
             @media(max-width: 991px) {
                 margin-top: 70px;
+            }
+
+            @media(max-width: 575px) {
+                margin-top: 50px;
             }
         
             .circle {
@@ -59,9 +71,14 @@
                 }
 
                 &.orange {
-                    margin: 30px auto 0 auto;
+                    margin: 30px auto 0;
                     border-color: $color-orange1;
                     background-color: $color-orange2;
+
+                    @media(max-width: 575px) {
+                        transform: none;
+                    }
+
                 }
 
                 &.blue {
@@ -79,6 +96,12 @@
 
                     @media(max-width: 767px) {
                         transform: translateY(-4px) translateX(-15px);
+                    }
+
+                    @media(max-width: 575px) {
+                        transform: none;
+                        text-align: center;
+                        margin: 0 auto 12px;
                     }
 
                 }
@@ -100,13 +123,24 @@
                         transform: translateY(-8px) translateX(415px);
                     }
 
+                    @media(max-width: 575px) {
+                        transform: none;
+                        text-align: center;
+                        margin: 0 auto 12px;
+                    }
+
                 }
 
                 &.green {
                     transform: translateY(-12px);
-                    margin: 0 auto 12px auto;
+                    margin: 0 auto 12px;
                     border-color: $color-green2;
                     background-color: $color-green3;
+
+                    @media(max-width: 575px) {
+                        transform: none;
+                    }
+
                 } 
 
             }
@@ -129,6 +163,13 @@
                     transform: translateY(-2px) translateX(55px);
                 }
 
+                @media(max-width: 575px) {
+                    transform: none;
+                    width: 3px;
+                    height: 138px;
+                    margin: -2px auto;
+                }
+
             }
 
             .line2 {
@@ -142,6 +183,13 @@
 
                 @media(max-width: 767px) {
                     width: 430px;
+                }
+
+                @media(max-width: 575px) {
+                    transform: none;
+                    width: 3px;
+                    height: 138px;
+                    margin: 10px auto -2px;
                 }
 
             }
@@ -164,6 +212,13 @@
                     transform: translateY(-10px) translateX(269px);
                 }
 
+                @media(max-width: 575px) {
+                    transform: none;
+                    width: 3px;
+                    height: 138px;
+                    margin: 10px auto -2px;
+                }
+
             }
 
             .text-green {
@@ -172,10 +227,20 @@
 
             .color-blue {
                 transform: translateY(-6px);
+
+                @media(max-width: 575px) {
+                    transform: none;
+                }
+
             }
 
             .color-yellow {
                 transform: translateY(-10px);
+
+                @media(max-width: 575px) {
+                    transform: none;
+                }
+
             }
 
             .text-left {
@@ -194,6 +259,12 @@
                     padding-left: 30px;
                 }
 
+                @media(max-width: 575px) {
+                    transform: none;
+                    padding-left: 15px;
+                    text-align: center!important;
+                }
+
             }
 
             .text-right {
@@ -210,6 +281,11 @@
                 @media(max-width: 767px) {
                     transform: translateX(-100px);
                     padding-right: 15px;
+                }
+
+                @media(max-width: 575px) {
+                    transform: none;
+                    text-align: center!important;
                 }
 
             }
@@ -233,11 +309,19 @@
             padding: 70px 0;
         }
 
+        @media(max-width: 575px) {
+            padding: 50px 0;
+        }
+
         form {
             margin-top: 60px;
 
             @media(max-width: 991px) {
                 margin-top: 50px;
+            }
+
+            @media(max-width: 575px) {
+                margin-top: 30px;
             }
 
             input[type="text"],

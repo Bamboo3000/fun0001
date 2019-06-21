@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 434 134" enable-background="new 0 0 434 134" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1416.2297" y1="8.2877" x2="-1415.2369" y2="7.2959" gradientTransform="matrix(720.5 0 0 -96 1020252.5 815)">
-	<stop  offset="0" style="stop-color:#003D7D"/>
-	<stop  offset="1" style="stop-color:#FEC700"/>
-</linearGradient>
-<path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M432,132V67V132z
-	 M431.7,67H1.8H431.7L431.7,67z M1.5,67V2V67z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 134"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-2157.2" y1="604.629" x2="-2156.207" y2="605.621" gradientTransform="matrix(720.5 0 0 96 1554121.5 -58025)"><stop offset="0" stop-color="#003D7D"/><stop offset="1" stop-color="#FEC700"/></linearGradient><path fill="none" stroke="url(#a)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M432 132V67v65zm-.3-65H1.8h429.9zM1.5 67V2v65z"/></svg>
