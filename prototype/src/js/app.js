@@ -159,9 +159,11 @@ $(document).ready(function() {
 
 $(window).on('load', function() {
     lazyImages();
-    //productsCarousel();
+    setTimetout(function() {
+        menuScroll();
+    }, 100);
 });
 
-$(window).on('load scroll', function() {
+$(window).on('scroll', function() {
 	menuScroll();
 });
