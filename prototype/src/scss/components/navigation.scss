@@ -1,16 +1,102 @@
 .navigation {
     position: absolute;
-    height: 100px;
-    top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    top: 0;
     z-index: 9999;
     background-color: transparent;
+    
+    &.toscroll {
+        position: fixed;
+        transform: translateY(-110%);
+        background-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        box-shadow: 0 -25px 70px -20px rgba($color: $color-primary, $alpha: 0.75);
+
+        @media(max-width: 767px) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        @media(max-width: 575px) {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+    }
+
+    &.scrolled {
+        transform: translateY(0);
+        transition: all 500ms ease;
+
+        .logo {
+    
+            object,
+            svg {
+                filter: brightness(1)!important;
+                max-width: 180px;
+
+                @media(max-width: 991px) {
+                    max-width: 160px;
+                }
+    
+                @media(max-width: 575px) {
+                    max-width: 140px;
+                }
+    
+                @media(max-width: 360px) {
+                    max-width: 120px;
+                }
+
+            }
+        
+        }
+
+        .navigation__menu {
+
+            ul {
+
+                li {
+
+                    a {
+
+                        i {
+
+                            &.fa-facebook-square {
+                                color: #1877f2;
+                            }
+
+                            &.fa-linkedin {
+                                color: #007bb5;
+                            }
+
+                            &.fa-twitter-square {
+                                color: #1da1f2;
+                            }
+
+                            &.fa-instagram {
+                                color: #c32aa3;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
     @media(max-width: 767px) {
-        top: 20px;
+        padding-top: 20px;
     }
 
     @media(max-width: 575px) {
-        top: 15px;
+        padding-top: 15px;
     }
 
     &__wrapper {

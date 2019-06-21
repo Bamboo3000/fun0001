@@ -1,6 +1,7 @@
 .footer {
     color: white;
     background-color: $color-tertiary;
+    @include gradientA($color-secondary, $color-tertiary);
     padding: 40px 0 25px;
 
     .logo {

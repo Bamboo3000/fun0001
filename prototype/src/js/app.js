@@ -39,7 +39,7 @@ function cookieAgree()
 function slideTo(el)
 {
 	$('html, body').animate({
-		scrollTop: $(el).offset().top
+		scrollTop: $(el).offset().top - 50
 	}, 500);
 }
 
@@ -53,6 +53,32 @@ function lazyImages()
 		var $src = $(this).data('src');
 		$(this).attr('src', $src).removeAttr('data-src');	
     });
+}
+
+function menuScroll()
+{
+    var $nav = $('.navigation');
+    var $navH = $nav.outerHeight(true);
+    var $scroll = $(window).scrollTop();
+    var $header = $('.header__home').outerHeight(true) - $navH*3;
+	if($scroll >= $navH) {
+		if(!$nav.hasClass('toscroll')) {
+			$nav.addClass('toscroll');
+		}
+    } else {
+        if($nav.hasClass('toscroll')) {
+			$nav.removeClass('toscroll');
+		}
+    }
+    if($scroll >= $header) {
+        if(!$nav.hasClass('scrolled')) {
+			$nav.addClass('scrolled');
+		}
+    } else {
+		if($nav.hasClass('scrolled')) {
+			$nav.removeClass('scrolled');
+		}
+	}
 }
 
 // function productsCarousel()
@@ -134,4 +160,8 @@ $(document).ready(function() {
 $(window).on('load', function() {
     lazyImages();
     //productsCarousel();
+});
+
+$(window).on('load scroll', function() {
+	menuScroll();
 });
