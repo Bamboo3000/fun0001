@@ -1,4 +1,7 @@
 'use strict';
+AOS.init({
+    once: true,
+});
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
