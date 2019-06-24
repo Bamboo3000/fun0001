@@ -1,6 +1,8 @@
 title = "Home"
 url = "/"
 is_hidden = 0
+
+[form]
 ==
 
 {% partial 'head' %}
@@ -174,27 +176,29 @@ is_hidden = 0
                     </h2>
                 </div>
                 <div class="col-xl-7 col-lg-8">
-                    <form data-request="onSubmit" class="row justify-content-center">
+                    <form data-request="onSubmit" data-request-validate data-request-flash class="row justify-content-center">
                         <div class="col-md-6">
-                            <input type="text" required>
+                            <input type="text" name="name" required>
                             <div class="placeholder">
                                 Imię i Nazwisko <span>*</span>
                             </div>
+                            <span class="validation" data-validate-for="name"></span>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" required>
+                            <input type="text" name="phone" required>
                             <div class="placeholder">
                                 Telefon <span>*</span>
                             </div>
+                            <span class="validation" data-validate-for="phone"></span>
                         </div>
                         <div class="col-md-6">
-                            <input type="email">
+                            <input type="email" name="email">
                             <div class="placeholder">
                                 Email <small>(opcjonalnie)</small>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <select name="">
+                            <select name="money">
                                 <option value="" selected>————————————</option>
                                 <option value="<100k">do 100.000 PLN</option>
                                 <option value="100k-200k">100.000 - 200.000 PLN</option>
@@ -209,7 +213,7 @@ is_hidden = 0
                             </div>
                         </div>
                         <div class="col-12">
-                            <textarea name="" rows="10"></textarea>
+                            <textarea name="description" rows="10"></textarea>
                             <div class="placeholder">
                                 Opis projektu / biznesu <small>(opcjonalnie)</small>
                             </div>
@@ -229,5 +233,14 @@ is_hidden = 0
             </div>
         </div>
     </section>
+
+    {% flash %}
+        <p
+            data-control="flash-message"
+            class="flash-message fade {{ type }}"
+            data-interval="30">
+            {{ message }}
+        </p>
+    {% endflash %}
 
 {% partial 'footer' %}

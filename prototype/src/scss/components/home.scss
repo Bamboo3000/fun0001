@@ -324,6 +324,15 @@
                 margin-top: 30px;
             }
 
+            span {
+
+                &.validation {
+                    font-weight: 700;
+                    color: $color-red;
+                }
+
+            }
+
             input[type="text"],
             input[type="email"],
             select,
@@ -397,7 +406,7 @@
 
                 &+.select {
                     position: absolute;
-                    top: 10px;
+                    top: 12px;
                     left: 15px;
                     right: 15px;
                     max-width: 100%;
@@ -425,7 +434,20 @@
                     }
 
                     &.hide {
-                        opacity: 0;
+                        top: -4px;
+                        padding: 0;
+                        font-size: 12px;
+                        background-color: transparent;
+                        font-weight: 400;
+
+                        small {
+                            font-size: 10px;
+                        }
+
+                        i {
+                            top: 25px;
+                        }
+
                     }
 
                 }
