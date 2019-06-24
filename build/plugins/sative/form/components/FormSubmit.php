@@ -6,10 +6,12 @@ use Flash;
 use Redirect;
 use Request;
 use Mail;
+use Crypt;
 use Validator;
 use Validation;
 use ValidationException;
 use Sative\Form\Models\Form;
+use Illuminate\Support\Facades\DB;
 //use \Anhskohbo\NoCaptcha\NoCaptcha;
 
 class FormSubmit extends ComponentBase
@@ -40,6 +42,8 @@ class FormSubmit extends ComponentBase
             'name' => Input::get('name'),
             'phone' => Input::get('phone'),
             'email' => Input::get('email'),
+            'money' => Input::get('money'),
+            'description' => Input::get('description'),
             'consent' => Input::get('consent'),
         );
 
@@ -56,6 +60,17 @@ class FormSubmit extends ComponentBase
             throw new ValidationException($validator);
 		} else {
             //$this->sendMail($form_data, 'Thanks for applying for a job at Search It Recruitment');
+            $form_data['consent'] = 1;
+            Form::insertGetId(
+                [
+                    'name' => $form_data['name'],
+                    'phone' => $form_data['phone'],
+                    'email' => $form_data['email'],
+                    'money' => $form_data['money'],
+                    'description' => $form_data['description'],
+                    'agree' => $form_data['consent'],
+                ]
+            );
             Flash::success('Dziękujemy za wysłanie zgłoszenia! Skonktujemy się z Tobą już wkrótce!');
         }
         
