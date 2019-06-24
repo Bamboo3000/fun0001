@@ -8,7 +8,7 @@ use Model;
 class Form extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+    use \October\Rain\Database\Traits\Encryptable;
 
     /**
      * @var string The database table used by the model.
@@ -20,4 +20,6 @@ class Form extends Model
      */
     public $rules = [
     ];
+
+    protected $encryptable = ['name', 'phone', 'email'];
 }

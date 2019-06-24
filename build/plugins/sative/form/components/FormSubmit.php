@@ -63,9 +63,9 @@ class FormSubmit extends ComponentBase
             $form_data['consent'] = 1;
             Form::insertGetId(
                 [
-                    'name' => $form_data['name'],
-                    'phone' => $form_data['phone'],
-                    'email' => $form_data['email'],
+                    'name' => Crypt::encrypt($form_data['name']),
+                    'phone' => Crypt::encrypt($form_data['phone']),
+                    'email' => Crypt::encrypt($form_data['email']),
                     'money' => $form_data['money'],
                     'description' => $form_data['description'],
                     'agree' => $form_data['consent'],

@@ -3,3 +3,9 @@
 1.0.2:
     - 'Created table sative_form_form'
     - builder_table_create_sative_form_form.php
+1.0.3:
+    - 'Updated table sative_form_form'
+    - builder_table_update_sative_form_form.php
+1.0.4:
+    - 'Updated table sative_form_form'
+    - builder_table_update_sative_form_form_2.php
