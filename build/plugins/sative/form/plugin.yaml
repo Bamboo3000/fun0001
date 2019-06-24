@@ -1,0 +1,11 @@
+plugin:
+    name: 'sative.form::lang.plugin.name'
+    description: 'sative.form::lang.plugin.description'
+    author: Sative
+    icon: oc-icon-list-alt
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Formularz
+        url: sative/form/forms
+        icon: icon-list-alt

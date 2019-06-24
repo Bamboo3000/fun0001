@@ -1,0 +1,10 @@
+name: Forms
+form: $/sative/form/models/form/fields.yaml
+modelClass: Sative\Form\Models\Form
+defaultRedirect: sative/form/forms
+create:
+    redirect: 'sative/form/forms/update/:id'
+    redirectClose: sative/form/forms
+update:
+    redirect: sative/form/forms
+    redirectClose: sative/form/forms

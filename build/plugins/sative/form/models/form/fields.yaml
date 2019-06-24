@@ -1,0 +1,41 @@
+fields:
+    name:
+        label: 'Imię i nazwisko'
+        span: left
+        readOnly: 1
+        type: text
+    phone:
+        label: Telefon
+        span: right
+        readOnly: 1
+        type: text
+    email:
+        label: Email
+        span: left
+        readOnly: 1
+        hidden: 0
+        type: text
+    money:
+        label: 'Chce zebrać'
+        options:
+            '<100k': 'do 100.000 PLN'
+            100k-200k: '100.000 - 200.000 PLN'
+            200k-500k: '200.000 - 500.000 PLN'
+            500k-1M: '500.000 - 1.000.000 PLN'
+            1M-2M: '1.000.000 - 2.000.000 PLN'
+            2M>: 'powyżej 2.000.000 PLN'
+        showSearch: true
+        span: right
+        readOnly: 1
+        type: dropdown
+    description:
+        label: 'Opis biznesu'
+        size: large
+        span: left
+        readOnly: 1
+        type: textarea
+    comments:
+        label: Komentarz
+        span: right
+        size: large
+        type: textarea

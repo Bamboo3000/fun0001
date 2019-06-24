@@ -1,0 +1,4 @@
+title: Forms
+modelClass: Sative\Form\Models\Form
+toolbar:
+    buttons: reorder_toolbar
