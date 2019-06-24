@@ -32,7 +32,17 @@
 
         h2 {
             color: $color-tertiary;
-            margin-bottom: 0.3em;
+            margin-bottom: 1em;
+        }
+
+        .fw300 {
+            line-height: 1.44;
+
+            strong {
+                margin-top: 10px;
+                display: block;
+            }
+
         }
 
         .path {
