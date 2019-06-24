@@ -1,6 +1,6 @@
 'use strict';
 AOS.init({
-    once: true,
+    once: true
 });
 
 function setCookie(cname, cvalue, exdays) {
