@@ -1,0 +1,44 @@
+description = "PP page"
+
+[staticPage]
+==
+
+{variable name="hreflang_en" label="hreflang - EN - URL" tab="hreflang" type="text"}{/variable}
+{variable name="hreflang_nl" label="hreflang - NL - URL" tab="hreflang" type="text"}{/variable}
+
+{% partial 'head' %}
+
+    <header class="header header__home">
+        <picture class="bg-cover-abs" data-aos="fade-down" data-aos-duration="1000">
+            <source media="(min-width: 1920px)" srcset="{{ 'assets/img/header.jpg'|theme }}">
+            <source media="(min-width: 1280px)" srcset="{{ 'assets/img/header1920.jpg'|theme }}">
+            <source media="(min-width: 960px)" srcset="{{ 'assets/img/header1280.jpg'|theme }}">
+            <source media="(min-width: 720px)" srcset="{{ 'assets/img/header960.jpg'|theme }}">
+            <source media="(min-width: 1px)" srcset="{{ 'assets/img/header720.jpg'|theme }}">
+            <img class="bg-cover-abs lazy" data-src="{{ 'assets/img/header.jpg'|theme }}">
+        </picture>
+        <div class="container" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="200">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-12">
+                    <h1>
+                        Regulamin serwisu internetowego
+                    </h1>
+                    <h2 class="text-size-xxxlarge">
+                        www.fundit.com.pl 
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="terms" class="terms terms__content">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xl-10 col-12">
+                    {% page %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% partial 'footer' %}

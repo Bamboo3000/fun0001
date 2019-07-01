@@ -1,0 +1,30 @@
+.terms {
+
+    &__content {
+        padding: 80px 0;
+
+        @media(max-width: 991px) {
+            padding: 70px 0;
+        }
+
+        @media(max-width: 575px) {
+            padding: 50px 0;
+        }
+
+        h2,
+        p {
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: circle;
+        
+            li {
+                line-height: 1.66;
+            }
+        
+        }
+
+    }
+
+}
