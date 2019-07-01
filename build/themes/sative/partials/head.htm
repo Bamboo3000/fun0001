@@ -7,7 +7,7 @@
             {% if this.page.meta_title %}
                 {{ this.page.meta_title }}
             {% else %}
-                {{ this.page.title }}
+                {{ this.page.title }} | Fundit
             {% endif %}
         </title>
         <!-- Meta description -->
@@ -24,7 +24,6 @@
             gtag('js', new Date());
             gtag('config', 'UA-108874065-5');
         </script>
-
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/img/favicon/apple-touch-icon.png'|theme }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/img/favicon/favicon-32x32.png'|theme }}">
@@ -35,7 +34,21 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-config" content="{{ 'assets/img/favicon/browserconfig.xml'|theme }}">
         <meta name="theme-color" content="#ffffff">
-        <!-- # Favicon -->
+        <!-- /Favicon -->
+        <!-- OG tags -->
+        <meta property="og:image:height" content="1193">
+        <meta property="og:image:width" content="2278">
+        <meta property="og:image" content="{{ 'assets/img/logoHiResSocial.png'|theme }}">
+        <meta property="og:url" content="https://www.fundit.com.pl">
+        {% if this.page.meta_description %}
+            <meta property="og:description" content="{{ this.page.meta_description }}">
+        {% endif %}
+        {% if this.page.meta_title %}
+            <meta property="og:title" content="{{ this.page.meta_title }}">
+        {% else %}
+            <meta property="og:title" content="{{ this.page.title }} | Fundit">
+        {% endif %}
+        <!-- /OG tags -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700&display=swap&subset=latin-ext" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
