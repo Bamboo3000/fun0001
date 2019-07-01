@@ -483,6 +483,8 @@
 
                 a {
                     text-decoration: underline;
+                    position: relative;
+                    z-index: 999;
                 }
 
                 input {
