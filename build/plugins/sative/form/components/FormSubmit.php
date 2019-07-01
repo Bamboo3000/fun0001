@@ -59,7 +59,6 @@ class FormSubmit extends ComponentBase
         if($validator->fails()){
             throw new ValidationException($validator);
 		} else {
-            //$this->sendMail($form_data, 'Thanks for applying for a job at Search It Recruitment');
             $form_data['consent'] = 1;
             Form::insertGetId(
                 [
@@ -72,10 +71,10 @@ class FormSubmit extends ComponentBase
                 ]
             );
             Flash::success('Dziękujemy za wysłanie zgłoszenia! Skonktujemy się z Tobą już wkrótce!');
+            return Redirect::back();
+            die();
         }
         
-        //return Redirect::back();
-        //die();
     }
 
     protected function sendMail($inputs, $subject, $template)
