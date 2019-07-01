@@ -3,28 +3,29 @@ description = "PP page"
 [staticPage]
 ==
 
-{variable name="hreflang_en" label="hreflang - EN - URL" tab="hreflang" type="text"}{/variable}
-{variable name="hreflang_nl" label="hreflang - NL - URL" tab="hreflang" type="text"}{/variable}
+{variable name="image" label="Image" tab="Header" type="mediafinder" mode="image"}{/variable}
+{variable name="title" label="Title" tab="Header" type="text"}{/variable}
+{variable name="subtitle" label="Subtitle" tab="Header" type="text"}{/variable}
 
 {% partial 'head' %}
 
     <header class="header header__home">
         <picture class="bg-cover-abs" data-aos="fade-down" data-aos-duration="1000">
-            <source media="(min-width: 1920px)" srcset="{{ 'assets/img/header.jpg'|theme }}">
-            <source media="(min-width: 1280px)" srcset="{{ 'assets/img/header1920.jpg'|theme }}">
-            <source media="(min-width: 960px)" srcset="{{ 'assets/img/header1280.jpg'|theme }}">
-            <source media="(min-width: 720px)" srcset="{{ 'assets/img/header960.jpg'|theme }}">
-            <source media="(min-width: 1px)" srcset="{{ 'assets/img/header720.jpg'|theme }}">
-            <img class="bg-cover-abs lazy" data-src="{{ 'assets/img/header.jpg'|theme }}">
+            <source media="(min-width: 1920px)" srcset="{{ image|media }}">
+            <source media="(min-width: 1280px)" srcset="{{ image|media|resize(1920) }}">
+            <source media="(min-width: 960px)" srcset="{{ image|media|resize(1280) }}">
+            <source media="(min-width: 720px)" srcset="{{ image|media|resize(960) }}">
+            <source media="(min-width: 1px)" srcset="{{ image|media|resize(720) }}">
+            <img class="bg-cover-abs lazy" data-src="{{ image|media }}">
         </picture>
         <div class="container" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-12">
                     <h1>
-                        Regulamin serwisu internetowego
+                        {{ title }}
                     </h1>
                     <h2 class="text-size-xxxlarge">
-                        www.fundit.com.pl 
+                        {{ subtitle }}
                     </h2>
                 </div>
             </div>
