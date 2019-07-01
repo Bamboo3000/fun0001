@@ -3,8 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Fundit</title>
-        <meta name="description" content="">
+        <title>
+            {% if this.page.meta_title %}
+                {{ this.page.meta_title }}
+            {% else %}
+                {{ this.page.title }}
+            {% endif %}
+        </title>
+        <!-- Meta description -->
+        {% if this.page.meta_description %}
+            <meta name="description" content="{{ this.page.meta_description }}">
+        {% endif %}
+        <!-- /Meta description -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108874065-5"></script>
