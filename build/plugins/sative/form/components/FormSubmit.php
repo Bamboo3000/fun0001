@@ -48,10 +48,9 @@ class FormSubmit extends ComponentBase
         );
 
         $rules = [
-			'name'	                => 'required|min:3',
-            'phone'		            => 'required|numeric|min:9',
-            'consent'               => 'required|accepted'
-			//'g-recaptcha-response'  => 'required|captcha'
+			'name'	     => 'required|min:3',
+            'phone'		 => 'required|regex:/[0-9]{9}/',
+            'consent'    => 'required|accepted'
         ];
 
         $validator = Validator::make($form_data, $rules);
@@ -62,17 +61,15 @@ class FormSubmit extends ComponentBase
             $form_data['consent'] = 1;
             Form::insertGetId(
                 [
-                    'name' => Crypt::encrypt($form_data['name']),
-                    'phone' => Crypt::encrypt($form_data['phone']),
-                    'email' => Crypt::encrypt($form_data['email']),
+                    'name' => encrypt($form_data['name']),
+                    'phone' => encrypt($form_data['phone']),
+                    'email' => encrypt($form_data['email']),
                     'money' => $form_data['money'],
                     'description' => $form_data['description'],
                     'agree' => $form_data['consent'],
                 ]
             );
             Flash::success('Dziękujemy za wysłanie zgłoszenia! Skonktujemy się z Tobą już wkrótce!');
-            return Redirect::back();
-            die();
         }
         
     }
