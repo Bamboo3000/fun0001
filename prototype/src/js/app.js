@@ -131,22 +131,22 @@ function menuToggle()
 
 function placeholder()
 {
-    $('input, select, textarea').on('focusin', function() {
+    $(document).on('focusin', 'input, select, textarea', function() {
         $(this).next('.select, .placeholder').addClass('hide');
     });
-    $('input, select, textarea').on('focusout', function() {
+    $(document).on('focusout', 'input, select, textarea', function() {
         if(!$(this).val()) {
             $(this).next('.select, .placeholder').removeClass('hide');
         }
     });
-    $('select').on('click', function() {
+    $(document).on('click', 'select', function() {
         if(!$(this).val()) {
             $(this).next('.select, .placeholder').removeClass('hide');
         } else {
             $(this).next('.select, .placeholder').addClass('hide');
         }
     });
-    $('select').on('change', function() {
+    $(document).on('change', 'select', function() {
         if(!$(this).val()) {
             $(this).next('.select, .placeholder').removeClass('hide');
         } else {

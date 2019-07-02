@@ -1,0 +1,53 @@
+<form data-request-update="form: '#regForm'" data-request="onSubmit" data-request-validate data-request-flash class="row justify-content-center">
+    <div class="col-md-6">
+        <input type="text" name="name" required>
+        <div class="placeholder">
+            Imię i Nazwisko <span>*</span>
+        </div>
+        <span class="validation" data-validate-for="name"></span>
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="phone" required>
+        <div class="placeholder">
+            Telefon <span>*</span>
+        </div>
+        <span class="validation" data-validate-for="phone"></span>
+    </div>
+    <div class="col-md-6">
+        <input type="email" name="email">
+        <div class="placeholder">
+            Email <small>(opcjonalnie)</small>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <select name="money">
+            <option value="" selected>————————————</option>
+            <option value="<100k">do 100.000 PLN</option>
+            <option value="100k-200k">100.000 - 200.000 PLN</option>
+            <option value="200k-500k">200.000 - 500.000 PLN</option>
+            <option value="500k-1M">500.000 - 1.000.000 PLN</option>
+            <option value="1M-2M">1.000.000 - 2.000.000 PLN</option>
+            <option value="2M>">powyżej 2.000.000 PLN</option>
+        </select>
+        <div class="select">
+            Planuję zebrać <small>(opcjonalne)</small>
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </div>
+    <div class="col-12">
+        <textarea name="description" rows="10"></textarea>
+        <div class="placeholder">
+            Opis projektu / biznesu <small>(opcjonalnie)</small>
+        </div>
+    </div>
+    <div class="col-md-11 col-12 text-center">
+        <label for="consent" class="checkbox">
+            Wyrażam zgodę na przetwarzanie moich danych zgodnie z <a href="/regulamin">regulaminem strony</a>. <small>*</small>
+            <input type="checkbox" name="consent" required>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="col-12 text-center">
+        <input type="submit" data-attach-loading value="Piszę się na to!" class="btn btn__default">
+    </div>
+</form>
