@@ -10,6 +10,11 @@
                 {{ this.page.title }} | Fundit
             {% endif %}
         </title>
+        {% if this.page.meta_title %}
+            <meta name="title" content="{{ this.page.meta_title }}">
+        {% else %}
+            <meta name="title" content="{{ this.page.title }} | Fundit">
+        {% endif %}
         <!-- Meta description -->
         {% if this.page.meta_description %}
             <meta name="description" content="{{ this.page.meta_description }}">
@@ -54,6 +59,20 @@
         {% endif %}
         <meta property="og:site_name" content="Fundit"/>
         <!-- /OG tags -->
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.fundit.com.pl">
+        {% if this.page.meta_title %}
+            <meta property="twitter:title" content="{{ this.page.meta_title }}">
+        {% else %}
+            <meta property="twitter:title" content="{{ this.page.title }} | Fundit">
+        {% endif %}
+        {% if this.page.meta_description %}
+            <meta property="twitter:description" content="{{ this.page.meta_description }}">
+        {% endif %}
+        <meta property="twitter:image" content="{{ 'assets/img/logoHiResSocial.png'|theme }}">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700&display=swap&subset=latin-ext" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
