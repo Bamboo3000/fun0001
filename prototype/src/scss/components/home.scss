@@ -573,4 +573,37 @@
 
     }
 
+    &__newsletter {
+        padding: 80px 0;
+        background-color: $color-grey;
+
+        @media(max-width: 991px) {
+            padding: 70px 0;
+        }
+
+        @media(max-width: 575px) {
+            padding: 50px 0;
+        }
+
+        h2 {
+            color: $color-tertiary;
+            margin-bottom: 1em;
+        }
+        
+        #mc_embed_signup form {
+            padding: 0!important;
+        }
+
+        .mc-field-group {
+            margin: 0;
+            width: 100%!important;
+        }
+
+        .clear.submit {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
 }
